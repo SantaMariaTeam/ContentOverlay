@@ -31,7 +31,7 @@ contentOverlay.prototype._init = function() {
     var self = this;
 
     $(this.settings.targetSelector).on(self.settings.selectEvent, function(e) {
-        self.$content.css($(this).position()).show();
+        self.$content.css($(this).offset()).show();
     });
 }
 
