@@ -1,15 +1,15 @@
-#overlay {
+#content-overlay {
   display: none;
   position: absolute;
 }
 
-#overlay > DIV {
+#content-overlay > DIV {
   position: absolute;
   top: 0;
   left: -40px;
 }
 
-#overlay I {
+#content-overlay I {
   text-align: center;
   line-height: 30px;
   width: 30px;
@@ -19,18 +19,18 @@
   cursor: pointer;
 }
 
-#overlay .fa-arrows {
+#content-overlay .fa-arrows {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   background-color: rgb(175, 206, 1);
 }
-#overlay .fa-code {
+#content-overlay .fa-code {
   background-color: rgb(0, 172, 214);
 }
-#overlay .fa-plus {
+#content-overlay .fa-plus {
   background-color: rgb(77, 77, 77);
 }
-#overlay .fa-trash {
+#content-overlay .fa-trash {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: rgb(247, 99, 46);

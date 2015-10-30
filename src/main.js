@@ -1,7 +1,7 @@
 $.fn.contentOverlay = function(options) {
   options = $.extend(
     {
-      overlay: '#overlay'
+      overlay: '#content-overlay'
     },
     options
   );
