@@ -1,48 +1,22 @@
-var contentOverlay = function(settings) {
-  this.$content = null;
-  this.positions = ['left', 'top'];
-
-  this.settings = $.extend(
+$.fn.contentOverlay = function(options) {
+  options = $.extend(
     {
-      version: '0.1.0',
-      targetSelector: null,
-      overlay: null,
-      selectEvent: 'click', // 'click' or 'mouseover'
-      position: 'left',
-      offset: {
-        top: 5,
-        left: 5
-      }
+      overlay: '#overlay'
     },
-    settings
+    options
   );
 
-  if (this.settings.overlay) {
-    this.$content = $(this.settings.overlay);
-    if (this.$content) {
-      this.$content.hide();
-    };
-  };
+  var $selector = $(this.selector);
+  var $overlay = $(options.overlay);
 
-  this._init();
-}
-
-contentOverlay.prototype._init = function() {
-    var self = this;
-
-    $('html').on('click', function(e) {
-      $(self.settings.targetSelector).removeClass('content-overlay-outlined');
-      self.$content.hide();
-    });
-    $(this.settings.targetSelector).on(self.settings.selectEvent, function(e) {
-        e.stopPropagation();
-        $(self.settings.targetSelector).removeClass('content-overlay-outlined');
-        self.$content.css($(this).offset()).show();
-        $(this).addClass('content-overlay-outlined');
-    });
-}
-
-var instance = new contentOverlay({
-    targetSelector: '.component',
-    overlay: '#overlay',
-})
+  $('html').on('click', function(e) {
+    $selector.removeClass('content-overlay-outlined');
+    $overlay.hide();
+  });
+  $selector.on('click', function(e) {
+      e.stopPropagation();
+      $selector.removeClass('content-overlay-outlined');
+      $overlay.css($(this).offset()).show();
+      $(this).addClass('content-overlay-outlined');
+  });
+};
