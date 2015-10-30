@@ -6,7 +6,7 @@ var contentOverlay = function(settings) {
     {
       version: '0.1.0',
       targetSelector: null,
-      contentSelector: null,
+      overlay: null,
       position: 'left',
       offset: {
         top: 5,
@@ -16,8 +16,8 @@ var contentOverlay = function(settings) {
     settings
   );
 
-  if (this.settings.contentSelector) {
-    this.$content = $(this.settings.contentSelector);
+  if (this.settings.overlay) {
+    this.$content = $(this.settings.overlay);
     if (this.$content) {
       this.$content.hide();
     };
@@ -36,5 +36,5 @@ contentOverlay.prototype._init = function() {
 
 var instance = new contentOverlay({
     targetSelector: '.component',
-    contentSelector: '#content',
+    overlay: '#overlay',
 })
