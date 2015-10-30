@@ -35,7 +35,6 @@
   background-color: rgb(247, 99, 46);
 }
 
-
-.component:hover {
-  outline: 1px solid #eee;
+.content-overlay-outlined {
+  outline: 1px dotted rgba(113, 54, 0, 0.5);
 }

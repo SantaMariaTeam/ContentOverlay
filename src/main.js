@@ -30,8 +30,15 @@ var contentOverlay = function(settings) {
 contentOverlay.prototype._init = function() {
     var self = this;
 
+    $('html').on('click', function(e) {
+      $(self.settings.targetSelector).removeClass('content-overlay-outlined');
+      self.$content.hide();
+    });
     $(this.settings.targetSelector).on(self.settings.selectEvent, function(e) {
+        e.stopPropagation();
+        $(self.settings.targetSelector).removeClass('content-overlay-outlined');
         self.$content.css($(this).offset()).show();
+        $(this).addClass('content-overlay-outlined');
     });
 }
 
