@@ -2,17 +2,19 @@ var contentOverlay = function(settings) {
   this.$content = null;
   this.positions = ['left', 'top'];
 
-  var defaults = {
-    version: '0.1.0',
-    targetSelector: null,
-    contentSelector: null,
-    position: 'left',
-    offset: {
-      top: 5,
-      left: 5
-    }
-  }
-  this.settings = $.extend(defaults, settings)
+  this.settings = $.extend(
+    {
+      version: '0.1.0',
+      targetSelector: null,
+      contentSelector: null,
+      position: 'left',
+      offset: {
+        top: 5,
+        left: 5
+      }
+    },
+    settings
+  );
 
   if (this.settings.contentSelector) {
     this.$content = $(this.settings.contentSelector);
@@ -25,25 +27,11 @@ var contentOverlay = function(settings) {
 }
 
 contentOverlay.prototype._init = function() {
-    var _this = this;
-    var targets =
+    var self = this;
 
-    $(this.settings.targetSelector).each(function(i, t) {
-        $t = $(this);
-        $t.mouseover(function(e) {
-
-          // $(this).css('position', 'relative');
-          // _this.$content.show();
-          // _this.$content.detach().appendTo($t);
-
-          _this.$content.css({
-              top: $t.offset().top,
-              left: ($t.offset().left - _this.$content.outerWidth())
-          })
-          .show();
-
-        })
-    })
+    $(this.settings.targetSelector).on('mouseover', function(e) {
+        self.$content.css($(this).position()).show();
+    });
 }
 
 var instance = new contentOverlay({
