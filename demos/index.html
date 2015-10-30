@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Title lorem ipsum</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../dist/content-overlay.css"/>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+
+  <body>
+    <div style="background-color: #6f5499;">
+      <div class="container">
+        <h1>ContentOverlay jQuery Component</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="editable">Demo</h1>
+
+          <p class="lead editable">Click on any visual element to see ContentOverlay</p>
+
+          <p class="editable">
+            Basic grid layouts to get you familiar with building within the Bootstrap grid system.
+          </p>
+          <p class="editable">
+            Basic grid layouts to get you familiar with building within the Bootstrap grid system.
+          </p>
+          <hr />
+
+          <h2 class="editable">How to use</h2>
+
+          <p class="editable">Dependencies :</p>
+
+          <pre class="editable"><code class="html">
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"&gt;
+&lt;script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"&gt;&lt;/script&gt;
+          </code></pre>
+
+          <p class="editable">Load <strong>content-overlay</strong> files :</p>
+
+          <pre class="editable"><code>
+&lt;link rel="stylesheet" href="content-overlay.css"&gt;
+&lt;script type="text/javascript" src="content-overlay.js"&gt;&lt;/script&gt;
+          </code></pre>
+
+          <p class="editable">Append your overlay html code, example :</p>
+
+          <pre class="editable"><code>
+&lt;div id="content-overlay"&gt;&lt;div&gt;
+  &lt;i class="fa fa-arrows"&gt;&lt;/i&gt;
+  &lt;i class="fa fa-code"&gt;&lt;/i&gt;
+  &lt;i class="fa fa-plus"&gt;&lt;/i&gt;
+  &lt;i class="fa fa-trash"&gt;&lt;/i&gt;
+&lt;/div&gt;&lt;/div&gt;
+          </code></pre>
+
+          <p class="editable">Activate <strong>content-overlay</strong> on node with <code>class="editable"</code> :</p>
+
+          <pre class="editable"><code>
+$('.editable').contentOverlay({});
+          </code></pre>
+
+          <hr />
+
+          <h2 class="editable">Screenshot</h2>
+
+          <img class="editable" src="content-overlay-screenshot.png" style="width: 100%; border: 1px solid black; margin: 20px 0"/>
+
+        </div><!-- /.col-md-12 -->
+      </div><!-- /.row -->
+    </div> <!-- /.container -->
+
+    <div id="content-overlay"><div>
+      <i class="fa fa-arrows"></i>
+      <i class="fa fa-code"></i>
+      <i class="fa fa-plus"></i>
+      <i class="fa fa-trash"></i>
+    </div></div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+    <script type="text/javascript" src="../dist/content-overlay.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript">
+    $('.editable').contentOverlay();
+    </script>
+  </body>
+</html>
