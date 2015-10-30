@@ -7,6 +7,7 @@ var contentOverlay = function(settings) {
       version: '0.1.0',
       targetSelector: null,
       overlay: null,
+      selectEvent: 'click', // 'click' or 'mouseover'
       position: 'left',
       offset: {
         top: 5,
@@ -29,7 +30,7 @@ var contentOverlay = function(settings) {
 contentOverlay.prototype._init = function() {
     var self = this;
 
-    $(this.settings.targetSelector).on('mouseover', function(e) {
+    $(this.settings.targetSelector).on(self.settings.selectEvent, function(e) {
         self.$content.css($(this).position()).show();
     });
 }

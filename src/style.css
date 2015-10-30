@@ -1,11 +1,40 @@
 #overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 25px;
-  height: 25px;
-  background-color: #aaa;
 }
+
+#overlay > DIV {
+  position: absolute;
+  top: 0;
+  left: -40px;
+}
+
+#overlay I {
+  text-align: center;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#overlay .fa-arrows {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: rgb(175, 206, 1);
+}
+#overlay .fa-code {
+  background-color: rgb(0, 172, 214);
+}
+#overlay .fa-plus {
+  background-color: rgb(77, 77, 77);
+}
+#overlay .fa-trash {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: rgb(247, 99, 46);
+}
+
 
 .component:hover {
   outline: 1px solid #eee;
