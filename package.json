@@ -6,7 +6,7 @@
   "contributors": [
     {
       "name": "Jérome Poslednik",
-      "email": "webmaster@washaweb.com",
+      "email": "webmaster@washaweb.com"
     },
     {
       "name": "Olivier Kautz",
@@ -17,5 +17,9 @@
       "email": "contact@stephane-klein.info"
     }
   ],
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/SantaMariaTeam/ContentOverlay.git"
+  },
   "license": "BSD-3-Clause"
 }
