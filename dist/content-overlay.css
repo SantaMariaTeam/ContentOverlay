@@ -1,6 +1,12 @@
+.content-overlay-wrapper {
+  position: relative;
+}
 #content-overlay {
   display: none;
+  z-index: 99999;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #content-overlay > DIV {
