@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Title lorem ipsum</title>
+    <title>Content Overlay demo</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -18,11 +18,13 @@
   </head>
 
   <body>
-    <div style="background-color: #6f5499;">
+    <header class="jumbotron">
       <div class="container">
-        <h1>ContentOverlay jQuery Component</h1>
-      </div>
-    </div>
+        <h1><i class="fa fa-object-group"></i>&nbsp;&nbsp;ContentOverlay</h1>
+        <p class="lead">A lightweight jQuery plugin used to create dynamic overlay contents.</p>
+      </div>  
+    </header>
+
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -33,9 +35,7 @@
           <p class="editable">
             Basic grid layouts to get you familiar with building within the Bootstrap grid system.
           </p>
-          <p class="editable">
-            Basic grid layouts to get you familiar with building within the Bootstrap grid system.
-          </p>
+
           <hr />
 
           <h2 class="editable">How to use</h2>
@@ -93,7 +93,7 @@ $('.editable').contentOverlay({});
     <script type="text/javascript" src="../dist/content-overlay.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script type="text/javascript">
-    $('.editable').contentOverlay();
+      $('.editable').contentOverlay();
     </script>
   </body>
 </html>

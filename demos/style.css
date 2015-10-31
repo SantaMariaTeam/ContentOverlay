@@ -4,3 +4,18 @@ PRE {
 .hljs {
   padding: 0 20px;
 }
+
+.jumbotron {
+    background-color: #6f5499;
+    color: #FFF;
+}
+
+.jumbotron h1 {
+    font-weight: bold;
+    text-shadow: 0 4px 0 #6f5499, 0 8px 0 #312346;
+    font-size: 48px;
+}
+
+.jumbotron .lead {
+    font-size: 24px;
+}
