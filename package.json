@@ -1,0 +1,21 @@
+{
+  "name": "ContentOverlay",
+  "version": "0.1.0",
+  "description": "A lightweight jQuery plugin used to create dynamic overlay contents.",
+  "author": "Santa Maria Team",
+  "contributors": [
+    {
+      "name": "Jérome Poslednik",
+      "email": "webmaster@washaweb.com",
+    },
+    {
+      "name": "Olivier Kautz",
+      "email": "olivier@k3z.fr"
+    },
+    {
+      "name": "Stéphane Klein",
+      "email": "contact@stephane-klein.info"
+    }
+  ],
+  "license": "BSD-3-Clause"
+}
