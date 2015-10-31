@@ -70,7 +70,14 @@
           <p class="editable">Activate <strong>content-overlay</strong> on node with <code>class="editable"</code> :</p>
 
           <pre class="editable"><code>
-$('.editable').contentOverlay({});
+$('.editable')
+  .contentOverlay()
+  .on('show', function(e) {
+    console.log('overlay is activated on ', e.target);
+  })
+  .on('hide', function(e) {
+    console.log('overlay is disabled on ', e.target);
+  });
           </code></pre>
 
           <hr />
