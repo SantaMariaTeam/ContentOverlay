@@ -1,5 +1,4 @@
 $.fn.contentOverlay = function(options) {
-  var $selector = this;
   if (options == 'hide') {
     disable_overlay();
     return
@@ -32,7 +31,7 @@ $.fn.contentOverlay = function(options) {
 
   $('html').on('click', disable_overlay);
 
-  $selector.on('click', function(e) {
+  $('html').on('click', this.selector, function(e) {
     e.stopPropagation();
     disable_overlay();
     var $this = $(this);
