@@ -6,7 +6,7 @@ $.fn.contentOverlay = function(options) {
     options
   );
 
-  var $selector = $(this.selector);
+  var $selector = this;
   var $overlay = $(options.overlay);
 
   function disable_overlay() {
